@@ -36,6 +36,7 @@ def calculate_stats(
                     **info,
                 }
             )
+    GLOBALS.redis.update_job_progress(job_uuid, 1)
     return result
 
 
